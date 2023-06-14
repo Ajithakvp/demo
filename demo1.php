@@ -1,4 +1,5 @@
 <?php
+include("config.php");
 session_start();
 
 ?>
@@ -23,16 +24,18 @@ session_start();
 
        
 <div class="container">
+    <form action="login.php" method="POST">
 <center><label><b>Login Page</b></label></center>
   <label for="username" style="margin:10px 10px 10px 35px;">Username:</label><br>
   <center><input style="color:Tomato;  padding: 10px ; width: 85%  ;   
-        border: 2px solid green;" type="text" required placeholder="Username" id="username" name="username" > </center><br>
+        border: 2px solid green;" type="text" required placeholder="Username" id="empid" name="empid" > </center><br>
    <label  style="margin:10px 10px 10px 35px;">Password:</label><br>
-   <center><input style="color:Tomato;  padding: 10px ;  width: 85% ; border: 2px solid green;" type="password" id="pwd" name="pwd" placeholder="password"></center><br><br>
-  <center><input type="submit" style=" padding: 10px 50px 10px 50px;  background-color:red; color:white;  border-radius: 10%;" value="Submit" onclick="data()"><center></div>
+   <center><input style="color:Tomato;  padding: 10px ;  width: 85% ; border: 2px solid green;" type="password" id="password" name="password" placeholder="password"></center><br><br>
+  <center><input type="submit" style=" padding: 10px 50px 10px 50px;  background-color:red; color:white;  border-radius: 10%;" value="Submit" ><center></div>
+</form>
 
 
-<script>
+<!-- <script>
 function data(){
 
     uname=document.getElementById("username").value;
@@ -55,7 +58,7 @@ function data(){
     }
 
 }
-</script>
+</script> -->
 
 
 

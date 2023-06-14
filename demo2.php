@@ -2,6 +2,9 @@
 <?php
 session_start();
 ?>
+<?php
+include("config.php");
+?>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -113,11 +116,11 @@ li a:hover:not(.active) {
 
 
 <div id="mySidenav" class="sidenav">
-  <a href="demo1.php" id="about">Dashboard<i class="fa fa-fw fa-home" style=" margin-left:85;"></i></a>
-  <a href="#" id="blog">Attendance<i class="fa fa-fw fa-wrench" style=" margin-left:83;"></i></a>
+  <a href="demo2.php" id="about">Dashboard<i class="fa fa-fw fa-home" style=" margin-left:85;"></i></a>
+  <a href="attendace.php" id="blog">Attendance<i class="fa fa-fw fa-wrench" style=" margin-left:83;"></i></a>
   <a href="#" id="projects">Report<i class="fa fa-fw fa-user" style=" margin-left:115;"></i></a>
   <a href="#" id="contact">Leave Report<i class="fa fa-fw fa-envelope" style=" margin-left:63;"></i> </a>
-  <a href="#" id="test1">Attendance Report<i class="fa fa-fw fa-wrench" style=" margin-left:20;"></i> </a>
+  <a href="attendacereport.php" id="test1">Attendance Report<i class="fa fa-fw fa-wrench" style=" margin-left:20;"></i> </a>
   <a href="#" id="test2">Expense<i class="fa fa-fw fa-user" style=" margin-left:105;"></i> </a>
   <a href="#" id="test3">Expense Report<i class="fa fa-fw fa-envelope" style=" margin-left:45;"></i> </a>
   <a href="#" id="test4">Sales Report<i class="fa fa-fw fa-wrench" style=" margin-left:70;"></i> </a>
@@ -133,8 +136,8 @@ li a:hover:not(.active) {
     <center><img src ="img.png" width="100" height="100"></center>
     <label style = "font-size: 30px; color: brown; font-family: Cursive	 " ><center><p id="name"></p></center></label>
     <div class=row>
-    <button style="width:200; height:200; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" onclick="showDialog()"><img src ="attendacereport.png" width="80" height="80" ><br><br> Attendance</br></br></button>
-    <button style="width:200; height:200; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" onclick="showDialog()"><img src ="attendacereport.png" width="80" height="80" ><br><br> Attendance Report</br></br></button>
+    <button style="width:200; height:200; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" id="attendance" onclick="attendance()"><img src ="attendacereport.png" width="80" height="80" ><br><br> Attendance</br></br></button>
+    <button style="width:200; height:200; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" onclick="attendancereport()"><img src ="attendacereport.png" width="80" height="80" ><br><br> Attendance Report</br></br></button>
     <button style="width:200; height:200; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" onclick="showDialog()"><img src ="leave.png" width="80" height="80" ><br><br> Leave Report</br></br></button>
     <button style="width:200; height:200; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" onclick="showDialog()"><img src ="waitexpenses.png" width="80" height="80" ><br><br> Expense</br></br></button>
     <button style="width:200; height:200; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" onclick="showDialog()"><img src ="waitexpenses.png" width="80" height="80" ><br><br> Expense Report</br></br></button>
@@ -159,7 +162,15 @@ li a:hover:not(.active) {
          document.getElementById("name").innerHTML=uname;
          document.getElementById("pass").innerHTML=upass;
          function showDialog() {
-  alert("dialog open");
+
+}
+function attendance() {
+  window.location="http://localhost/demo/attendace.php";
+
+
+}
+function attendancereport(){
+  window.location="http://localhost/demo/attendacereport.php";
 }
  
     </script>
