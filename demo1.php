@@ -18,11 +18,7 @@ session_start();
     } 
     </style>
 
-<body style="background-color:powderblue;">
-
-
-
-       
+<body style="background-color:powderblue;">       
 <div class="container">
     <form action="login.php" method="POST">
 <center><label><b>Login Page</b></label></center>

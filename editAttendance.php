@@ -8,6 +8,7 @@ include("config.php");
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
 body {
   margin: 0;
@@ -127,20 +128,20 @@ $sql="SELECT * from attendance ";
 $result=mysqli_query($con,$sql);
 ?>
 <table width='100%' border=0 style="color:black;  background-color:black;" height='10%'>
+
 <center><label style="color:red; font-size:40px"><b>Attendance Report</b></label></center><br>
 <td style="color:white; font-size:30px; background-color:red;"><center><b>Name</b></center></td>
 <td style="color:white; font-size:30px; background-color:red;"><center><b>Attendance</b></center></td>
-<td style="color:white; font-size:30px; background-color:red;"><center><b>Delete</b></center></td>
+<td style="color:white; font-size:30px; background-color:red;"><center><b>Update</b></center></td>
 </tr>
     <?php
     while($res=mysqli_fetch_array($result)){
         echo"<tr>";
-        echo"<td  style='color:blue; font-size:20px; background-color:MistyRose; padding:10px 0px 10px 0px'><center>".$res['name']."</center></td>";
+        echo"<td style='color:blue; font-size:20px; background-color:MistyRose; padding:10px 0px 10px 0px'><center>".$res['name']."</center></td>";
         echo"<td style='color:blue; font-size:20px; background-color:MistyRose'><center>".$res['text']."</center></td>";
-        $id=$res['id'];
         echo"<td style=' background-color:MistyRose' >
-        <a href='deleteattendance.php?del=$res[id]'>
-        <center><button name='id' value><i class='fa fa-trash'></i></button></td></a></center></td>";
+        <a href='updateAttendance.php?update=$res[id]'>
+        <center><i class='fa fa-edit' style='color:red'></i></td></a></center></td>";
     }
     ?>
     </table>

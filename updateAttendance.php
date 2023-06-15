@@ -1,7 +1,14 @@
 <?php
-session_start();
-include("config.php");
+include('config.php');
 
+$updateid=$_GET['update'];
+$sql="SELECT * from attendance where id='$updateid'";
+$result=mysqli_query($con,$sql);
+while($row=mysqli_fetch_array($result)){
+    $name=$row['name'];
+    $text=$row['text'];
+
+}
 
 ?>
 
@@ -109,12 +116,7 @@ li a:hover:not(.active) {
   background-color: #000000;
 }
 </style>
-
-
-
 <body style=background-color:powderblue;>
-
-
 <div id="mySidenav" class="sidenav">
   <a href="demo2.php" id="about">Dashboard<i class="fa fa-fw fa-home" style=" margin-left:85;"></i></a>
   <a href="attendace.php" id="blog">Attendance<i class="fa fa-fw fa-user" style=" margin-left:83;"></i></a>
@@ -122,27 +124,12 @@ li a:hover:not(.active) {
   <a href="editAttendance.php" id="contact">Update attendance<i class="fa fa-pencil-square-o" style=" margin-left:30;"></i> </a>
 </div>
 <div  style="margin-left:5%;padding:1px 16px;height:1000px;" ><br>
-<?php
-$sql="SELECT * from attendance ";
-$result=mysqli_query($con,$sql);
-?>
-<table width='100%' border=0 style="color:black;  background-color:black;" height='10%'>
-<center><label style="color:red; font-size:40px"><b>Attendance Report</b></label></center><br>
-<td style="color:white; font-size:30px; background-color:red;"><center><b>Name</b></center></td>
-<td style="color:white; font-size:30px; background-color:red;"><center><b>Attendance</b></center></td>
-<td style="color:white; font-size:30px; background-color:red;"><center><b>Delete</b></center></td>
-</tr>
-    <?php
-    while($res=mysqli_fetch_array($result)){
-        echo"<tr>";
-        echo"<td  style='color:blue; font-size:20px; background-color:MistyRose; padding:10px 0px 10px 0px'><center>".$res['name']."</center></td>";
-        echo"<td style='color:blue; font-size:20px; background-color:MistyRose'><center>".$res['text']."</center></td>";
-        $id=$res['id'];
-        echo"<td style=' background-color:MistyRose' >
-        <a href='deleteattendance.php?del=$res[id]'>
-        <center><button name='id' value><i class='fa fa-trash'></i></button></td></a></center></td>";
-    }
-    ?>
-    </table>
+<form action="updateAttendanceStore.php" method="POST">
+    <center><label style="color:red; font-size:20px;"><b>Update Attendance<b></label><center><br>
+    <input type='hidden' name='id' value='<?php echo $updateid ;?>'>
+    <center><input style="color:Tomato;  padding: 10px ; width: 25% ; border: 2px solid green;" type="text" required placeholder="Name" id="name" name="name"  value='<?php echo $name ;?>'> </center><br>
+    <center><input style="color:Tomato;  padding: 10px ;  width: 25% ; border: 2px solid green;"  id="text" name="text" value='<?php echo $text ;?>' placeholder="Present (or) absent"></center><br><br>
+    <center><input type='submit' style='padding: 10px 50px 10px 50px ; background-color:red; color:white;  border-radius: 10%;' value='Submit'><center>
+</form>
 </div>
     </html>

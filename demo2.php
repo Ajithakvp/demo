@@ -109,61 +109,30 @@ li a:hover:not(.active) {
   background-color: #000000;
 }
 </style>
-
-
-
 <body style=background-color:powderblue;>
-
-
 <div id="mySidenav" class="sidenav">
   <a href="demo2.php" id="about">Dashboard<i class="fa fa-fw fa-home" style=" margin-left:85;"></i></a>
-  <a href="attendace.php" id="blog">Attendance<i class="fa fa-fw fa-wrench" style=" margin-left:83;"></i></a>
-  <a href="#" id="projects">Report<i class="fa fa-fw fa-user" style=" margin-left:115;"></i></a>
-  <a href="#" id="contact">Leave Report<i class="fa fa-fw fa-envelope" style=" margin-left:63;"></i> </a>
-  <a href="attendacereport.php" id="test1">Attendance Report<i class="fa fa-fw fa-wrench" style=" margin-left:20;"></i> </a>
-  <a href="#" id="test2">Expense<i class="fa fa-fw fa-user" style=" margin-left:105;"></i> </a>
-  <a href="#" id="test3">Expense Report<i class="fa fa-fw fa-envelope" style=" margin-left:45;"></i> </a>
-  <a href="#" id="test4">Sales Report<i class="fa fa-fw fa-wrench" style=" margin-left:70;"></i> </a>
-  <a href="#" id="test5">Quote Report<i class="fa fa-fw fa-user" style=" margin-left:65;"></i> </a>
-  <a href="#" id="test6">Sales Report<i class="fa fa-fw fa-envelope" style=" margin-left:70;"></i> </a>
-  <a href="#" id="test7">Quote Report<i class="fa fa-fw fa-user" style=" margin-left:65;"></i> </a>
-
-  
+  <a href="attendace.php" id="blog">Attendance<i class="fa fa-fw fa-user" style=" margin-left:83;"></i></a>
+  <a href="attendacereport.php" id="projects">Attendance Report<i class="fa fa-address-card" style=" margin-left:25;"></i> </a>
+  <a href="editAttendance.php" id="contact">Update attendance<i class="fa fa-pencil-square-o" style=" margin-left:30;"></i> </a>
 </div>
 <div  style="margin-left:5%;padding:1px 16px;height:1000px;" >
-
     <header><center><h1><b>CISTRON SYSTEM PRIVATE LIMITED</b></h1></center></header>
     <center><img src ="img.png" width="100" height="100"></center>
     <label style = "font-size: 30px; color: brown; font-family: Cursive	 " ><center><p id="name"></p></center></label>
     <div class=row>
     <button style="width:200; height:200; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" id="attendance" onclick="attendance()"><img src ="attendacereport.png" width="80" height="80" ><br><br> Attendance</br></br></button>
     <button style="width:200; height:200; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" onclick="attendancereport()"><img src ="attendacereport.png" width="80" height="80" ><br><br> Attendance Report</br></br></button>
-    <button style="width:200; height:200; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" onclick="showDialog()"><img src ="leave.png" width="80" height="80" ><br><br> Leave Report</br></br></button>
-    <button style="width:200; height:200; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" onclick="showDialog()"><img src ="waitexpenses.png" width="80" height="80" ><br><br> Expense</br></br></button>
-    <button style="width:200; height:200; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" onclick="showDialog()"><img src ="waitexpenses.png" width="80" height="80" ><br><br> Expense Report</br></br></button>
-    <button style="width:200; height:200; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" onclick="showDialog()"><img src ="detail.png" width="80" height="80" ><br><br> Sales Report</br></br></button>
-    <button style="width:200; height:200; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" onclick="showDialog()"><img src ="detail.png" width="80" height="80" ><br><br> Quote Report</br></br></button>
-    <button style="width:200; height:200; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" onclick="showDialog()"><img src ="detail.png" width="80" height="80" ><br><br> Service Report</br></br></button>
-    <button style="width:200; height:200; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" onclick="showDialog()"><img src ="detail.png" width="80" height="80" ><br><br> Location Report</br></br></button>
-    <button style="width:200; height:200; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" onclick="showDialog()"><img src ="detail.png" width="80" height="80" ><br><br> Approval Report</br></br></button>
-    <button style="width:200; height:200; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" onclick="showDialog()"><img src ="detail.png" width="80" height="80" ><br><br> Settings</br></br></button>
+    <button style="width:200; height:200; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" onclick="edit()"><img src ="leave.png" width="80" height="80" ><br><br>Update attendance</br></br></button>
 </div>
 </div>
-
 </body>
-
-
-
 </html>
-<script>
-         
+<script>  
          var uname= sessionStorage.getItem("name");
          var upass=sessionStorage.getItem("pass");
          document.getElementById("name").innerHTML=uname;
          document.getElementById("pass").innerHTML=upass;
-         function showDialog() {
-
-}
 function attendance() {
   window.location="http://localhost/demo/attendace.php";
 
@@ -171,6 +140,10 @@ function attendance() {
 }
 function attendancereport(){
   window.location="http://localhost/demo/attendacereport.php";
+}
+
+function edit(){
+  window.location="http://localhost/demo/editAttendance.php";
 }
  
     </script>
