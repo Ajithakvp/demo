@@ -121,9 +121,11 @@ li a:hover:not(.active) {
     <center><img src ="img.png" width="100" height="100"></center>
     <label style = "font-size: 30px; color: brown; font-family: Cursive	 " ><center><p id="name"></p></center></label>
     <div class=row>
-    <button style="width:200; height:200; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" id="attendance" onclick="attendance()"><img src ="attendacereport.png" width="80" height="80" ><br><br> Attendance</br></br></button>
-    <button style="width:200; height:200; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" onclick="attendancereport()"><img src ="attendacereport.png" width="80" height="80" ><br><br> Attendance Report</br></br></button>
-    <button style="width:200; height:200; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" onclick="edit()"><img src ="leave.png" width="80" height="80" ><br><br>Update attendance</br></br></button>
+    <button style="width:150; height:150; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" id="attendance" onclick="attendance()"><img src ="attendacereport.png" width="60" height="60" ><br><br> Attendance</br></br></button>
+    <button style="width:150; height:150; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" onclick="attendancereport()"><img src ="attendacereport.png" width="60" height="60" ><br><br> Attendance Report</br></br></button>
+    <button style="width:150; height:150; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" onclick="edit()"><img src ="leave.png" width="60" height="60" ><br><br>Update attendance</br></br></button>
+    <button style="width:150; height:150; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" onclick="logout()"><img src ="detail.png" width="60" height="60" ><br><br>Logout</br></br></button>
+
 </div>
 </div>
 </body>
@@ -144,6 +146,11 @@ function attendancereport(){
 
 function edit(){
   window.location="http://localhost/demo/editAttendance.php";
+}
+
+
+function logout(){
+  window.location="http://localhost/demo/demo1.php";
 }
  
     </script>
