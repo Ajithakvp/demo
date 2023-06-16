@@ -7,6 +7,12 @@ session_start();
 
 <html>
     <style>
+        body {
+  margin: 0;
+background: url(8.jpg);
+background-size: cover;
+
+}
         .container { 
         
         width: 400px;

@@ -18,6 +18,8 @@ while($row=mysqli_fetch_array($result)){
 <style>
 body {
   margin: 0;
+  background: url(8.jpg);
+ background-size: cover;
 }
 
 ul {

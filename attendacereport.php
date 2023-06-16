@@ -11,6 +11,8 @@ include("config.php");
 <style>
 body {
   margin: 0;
+  background: url(4.jpg);
+ background-size: cover;
 }
 
 ul {

@@ -6,12 +6,19 @@ session_start();
 include("config.php");
 ?>
 <html>
+  <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 <style>
 body {
   margin: 0;
+background: url(1.jpg);
+background-size: cover;
+
 }
+
 
 ul {
   list-style-type: none;
@@ -46,7 +53,7 @@ li a:hover:not(.active) {
   color: white;
 }
 #mySidenav a {
-  position: absolute;
+  position: fixed;
   left: -180px;
   transition: 0.3s;
   padding: 15px;
@@ -108,15 +115,25 @@ li a:hover:not(.active) {
   top: 620px;
   background-color: #000000;
 }
+
 </style>
+</head>
+
+
 <body style=background-color:powderblue;>
 <div id="mySidenav" class="sidenav">
   <a href="demo2.php" id="about">Dashboard<i class="fa fa-fw fa-home" style=" margin-left:85;"></i></a>
   <a href="attendace.php" id="blog">Attendance<i class="fa fa-fw fa-user" style=" margin-left:83;"></i></a>
   <a href="attendacereport.php" id="projects">Attendance Report<i class="fa fa-address-card" style=" margin-left:25;"></i> </a>
   <a href="editAttendance.php" id="contact">Update attendance<i class="fa fa-pencil-square-o" style=" margin-left:30;"></i> </a>
+  
 </div>
+
+  
+
+
 <div  style="margin-left:5%;padding:1px 16px;height:1000px;" >
+
     <header><center><h1><b>CISTRON SYSTEM PRIVATE LIMITED</b></h1></center></header>
     <center><img src ="img.png" width="100" height="100"></center>
     <label style = "font-size: 30px; color: brown; font-family: Cursive	 " ><center><p id="name"></p></center></label>
@@ -124,10 +141,16 @@ li a:hover:not(.active) {
     <button style="width:150; height:150; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" id="attendance" onclick="attendance()"><img src ="attendacereport.png" width="60" height="60" ><br><br> Attendance</br></br></button>
     <button style="width:150; height:150; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" onclick="attendancereport()"><img src ="attendacereport.png" width="60" height="60" ><br><br> Attendance Report</br></br></button>
     <button style="width:150; height:150; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" onclick="edit()"><img src ="leave.png" width="60" height="60" ><br><br>Update attendance</br></br></button>
-    <button style="width:150; height:150; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" onclick="logout()"><img src ="detail.png" width="60" height="60" ><br><br>Logout</br></br></button>
+    
+  <button style="width:150; height:150; border-radius:20%; color:red; margin-left:90; margin-top: 20" type="submit" onclick="logout()"><img src ="detail.png" width="60" height="60" ><br><br>Logout</br></br></button>
+ 
+</div>
+
+
 
 </div>
-</div>
+
+
 </body>
 </html>
 <script>  
