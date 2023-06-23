@@ -77,6 +77,8 @@ li a:hover:not(.active) {
   background-color: red ;
 }
 
+
+
 #contact {
   top: 200px;
   background-color: #555;
